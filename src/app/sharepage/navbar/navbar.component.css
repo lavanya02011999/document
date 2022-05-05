@@ -1,0 +1,20 @@
+.navbar{
+    background-color: black;
+}
+.navbar-light .navbar-nav .nav-link
+{
+    color:white;
+}
+
+
+.navbar-light .navbar-nav .nav-link.active-link
+{
+    color: var(--primary-color);
+    text-decoration: underline;
+   
+}
+.navbar-brand{
+    font-weight: bold;
+    font-size: 25px;
+    color:white;
+}

@@ -1,0 +1,29 @@
+<h1 style="font-family: 'Times New Roman', Times, serif; font-size: 30px; text-align: center;">Document List</h1>
+<div class="container">
+<table id="table" class="table table-stripped">
+    <thead>
+        <tr>
+            <th>Document Name </th>
+            <th>Document Type</th>
+            <th>Document Description</th>
+           
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let documents of documents" >
+            <td>{{ documents.docName }}</td>
+            <td>{{ documents.docType }}</td>
+            <td>{{ documents.docDescription }}</td>
+           
+            <td>
+                <div class="space">
+                <button id="update"  (click) = "updateDocuments(documents.id)" class ="btn btn-info">Update</button>
+                <button (click) = "deleteDocuments(documents.id)" class ="btn btn-danger" style="margin-left:10px">Delete</button>
+                <a href="" style="padding-left: 10px ;" download="fileName"> <button class="btn btn-info">Download</button></a>
+            </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+</div>

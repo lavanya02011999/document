@@ -1,0 +1,41 @@
+
+<div class="col-md-6 offset-md-3">
+<h3 style="font-family:'Times New Roman', Times, serif">Fill in the details</h3>
+<form (ngSubmit)="onsubmit()">
+
+    <div class="form-group">
+        <label for="">Document Name </label>
+        <input type="text" class="form-control" id="docName" (change)="onFileChange($event)"
+        [(ngModel)] = "documents.docName" name="docName">
+    </div><br>
+
+    <div class="form-group">
+        <label for="">Document Type</label><br>
+        <select  style=" height: 40px; width:754px" class="select" name="fileType" [(ngModel)]="documents.docType">
+            
+            <option>Choose the document type ...</option>
+            <option>Pdf</option>
+            <option>docx</option>
+            <option>xlsx</option>
+            <option>png</option>
+            <option>jpg</option>
+     </select>
+    </div><br>
+
+    <div class="form-group">
+        <label for="">Document Description</label>
+        <input type="text" class="form-control" id="docDescription"
+        [(ngModel)] = "documents.docDescription" name="docDescription">
+    </div><br>
+
+    <div class="form-group">
+        <label for="">Upload the document </label>
+        <input  style="margin-left:20px;" type="file" class="file" accept=".{{documents.docType}}" (change)="onFileChange($event)" 
+        name="doc" [ngModel]="documents.doc" />
+    </div><br>
+
+    <div class="button">
+    <button id="button" class="btn btn-md btn-dark" type="submit" >Create</button>
+</div>
+</form>
+</div>
